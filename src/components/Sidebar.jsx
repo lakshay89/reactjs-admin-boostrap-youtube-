@@ -176,7 +176,7 @@ function Sidebar() {
           </Link>
         </li>
 
-     
+        <Link to="/orders" className="w-100 text-decoration-none">
         <li>
           <Button
             className={`w-100 ${activeTab === 16 ? 'active' : ''}`}
@@ -187,6 +187,7 @@ function Sidebar() {
             <span className="arrow"><IoIosArrowForward /></span>
           </Button>
         </li>
+        </Link>
 
       
 
