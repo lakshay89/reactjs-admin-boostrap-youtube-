@@ -1,34 +1,39 @@
-import React from 'react'
-import gif from '../assests/images/share.gif'
+import React from 'react';
+import TrendingUpIcon from '@mui/icons-material/TrendingUp';
+import TrendingDownIcon from '@mui/icons-material/TrendingDown';
 
 export default function DashboardItems(props) {
   return (
-    <>
-          <div className="col-md-6 col-lg-6 m-2 p-2  d-flex flex-column align-items-center justify-content-around gap-auto  rounded-3 text-white" style={{backgroundImage:`linear-gradient(to right, ${props.color?.[0]}, ${props.color[1]})`
-        }}>
-            <div className="upper w-100 d-flex justify-content-between align-items-center">
-                <div className="one d-flex flex-column w-50">
-                    <h4>total user</h4>
-                    <h1>211</h1>
-                </div>
-                <div className="icon w-25">
-                    <img src={gif} className="w-100" alt="" />
-                </div>
-            </div>
+    <div
+      className="p-3 py-4 d-flex flex-column justify-content-between rounded-3 text-white"
+      style={{
+        backgroundImage: `linear-gradient(to right, ${props.color?.[0]}, ${props.color?.[1]})`,
+        position: 'relative',
+        height: '100%',
+      }}
+    >
+      {/* BACKGROUND ICON */}
+      <span className="chart">
+        {props.grow ? <TrendingUpIcon /> : <TrendingDownIcon />}
+      </span>
 
+      {/* TOP */}
+      <div className="d-flex justify-content-between align-items-center">
+        <div>
+          <h4 className="mb-1">{props.name}</h4>
+          <h1 className="fw-bold">{props.count}</h1>
+        </div>
 
-            <div className="lower w-100 d-flex justify-content-between align-items-center">
-                <div className="left">
-                    <div className="button">
-                        <button className="btn btn-light btn-sm">view all</button>
-                    </div>
-                </div>
-                <div className="right">
-                    <h6>+5% since last month</h6>
-                    </div>
-            </div>
-          
-          </div>
-    </>
-  )
+        <div style={{ width: '70px' }}>
+          <img src={props.icon} className="img-fluid" alt={props.name} />
+        </div>
+      </div>
+
+      {/* BOTTOM */}
+      <div className="d-flex justify-content-between align-items-center mt-3">
+        <button className="btn btn-light btn-sm">view all</button>
+        <small>+5% since last month</small>
+      </div>
+    </div>
+  );
 }

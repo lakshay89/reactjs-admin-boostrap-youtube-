@@ -1,10 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 
 body{
-   font-family: "Open Sans", sans-serif;
+   /* font-family: "Open Sans", sans-serif; */
+     font-family: 'Poppins', sans-serif;
    background-color:#ebe9e9 !important;
 }
+
+
 *{
   margin:0;
   padding:0;
@@ -153,12 +157,24 @@ transition: all 0.3s ease;
 .main .sidebar ul li .submenu{
   border-top: 1px solid #8a8484;
 }
-.main .sidebar ul li .active{
-  background-color: #0858f781;
+.main .sidebar ul li .active {
+  background-image: linear-gradient(
+    to right,
+    #24C6DC 0%,
+    #514A9D 51%,
+    #24C6DC 100%
+  );
+  background-size: 200% auto;
+  color: #ffffff !important;
   border-radius: 10px !important;
-  color:#0858f7;
-  
+  transition: all 0.5s ease;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
+.main .sidebar ul li .active:hover {
+  background-position: right center;
+  color: #fff;
+}
+
 
 .main .sidebar ul li .submenuwrapper.colapsed{
   height:0px;
@@ -208,8 +224,27 @@ transition: all 0.3s ease;
 
 /* content css */
 .content{
-  width:85%;
+  width:100%;
   flex:0 0 85%;
-  margin-left:15%;
+  margin-left:7%;
   padding:20px 30px;
+}
+.chart{
+  opacity: 0.1;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  /* z-index: -999; */
+}
+.chart svg{
+    font-size: 200px ;
+  color: #000;
+
+}
+
+/* table ocde dashbaord */
+.table{
+  background-color:#fff;
+  border-radius:10px;
+  margin-left: 8%;
 }
