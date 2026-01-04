@@ -8,6 +8,7 @@
     "@mui/icons-material": "^7.3.6",
     "@mui/material": "^7.3.6",
     "@mui/styled-engine-sc": "^7.3.5",
+    "@mui/x-charts": "^8.23.0",
     "@mui/x-data-grid": "^8.23.0",
     "@popperjs/core": "^2.11.8",
     "@testing-library/dom": "^10.4.1",

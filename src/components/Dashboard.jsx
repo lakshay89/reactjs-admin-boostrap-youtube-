@@ -10,7 +10,7 @@ import DataGridDemo from './DataGridDemo';
 
 export default function Dashboard() {
   return (<>
-    <div className="content">
+    <div className="content" style={{ overflow: 'hidden' }}>
 
       <h1>Dashboard</h1>
       <hr />
@@ -97,10 +97,14 @@ export default function Dashboard() {
 
       </div>
 
-    </div>
+    
     <div className="table w-100 p-3 mt-3 border-0 shadow-sm ">
       <h4 className="mb-4">Recent Orders</h4>
       <DataGridDemo />
+    </div>
+
+
+    
     </div>
   
     </>  );
